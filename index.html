@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cliente Ajax</title>
     <script src="js/script.js"> </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+<style>
+    table,
+    th,
+    td {
+        border: 1.5px solid rgb(88, 25, 236);
+    }
+</style>
+
 <body>
     <h1>Caso de Prueba</h1>
     <button onclick="consultar()"> Mostrar Paises</button>
@@ -16,10 +26,11 @@
     <button onclick="actualizar()"> Actualizar Paises</button>
     <button onclick="consultarId()"> Consultar ID Planeta</button>
 
-    <input type="number" id ="idCodigo" placeholder = "Codigo Planeta"></input>
-    
-    <div id="idDivConsulta">    
-    
+    <input type="number" id="idCodigo" placeholder="Codigo Planeta"></input>
+
+    <div id="idDivConsulta">
+
 
 </body>
+
 </html>
