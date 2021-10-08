@@ -82,3 +82,26 @@ function actualizar() {
             }        
         );
 }
+
+function consultarId(){
+
+    var codigo = $("#idCodigo").val();
+
+    $.ajax (
+        {
+            url          : 'https://g23bfb99f5036e6-bdpais.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/planeta/planeta/' + codigo,
+            type         : 'GET',
+            dataType     : 'json',
+            success      :  function(json){                                
+                                $("#idDivConsulta").empty();
+                                for (i=0; i<json.items.length; i++){
+                                    $("#idDivConsulta").append(json.items[i].codigo + json.items[i].nombre + " ")
+                                    }                                
+                                console.log(json) 
+            },
+            error        :  function(xhr,status){
+                                console.log(xhr);
+            }
+        }        
+    );
+}
