@@ -1,0 +1,11 @@
+/* Estilos de la tabla */
+table,
+th,
+td {
+    border: 1.5px solid rgb(88, 25, 236);
+}
+
+/* Estilos del Body */
+body{
+background-color: rgb(224, 213, 255);
+}
