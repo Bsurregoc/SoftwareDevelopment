@@ -6,8 +6,15 @@ function consultar() {
                 dataType : 'json',
                 success  :  function(json){                                
                                 $("#idDivConsulta").empty();
+                                $("#idDivConsulta").append("<table>");
+                                $("#idDivConsulta").append("<caption>Tabla de Planetas</caption>");
+                                $("#idDivConsulta").append("<tr><th>Elemento</th><th>Descripcion</th></tr>");
                                 for (i=0; i<json.items.length; i++){
-                                    $("#idDivConsulta").append(json.items[i].codigo + json.items[i].nombre + " ")
+                                    $("#idDivConsulta").append("<tr>");
+                                    $("#idDivConsulta").append("<td>" + json.items[i].codigo) + "</td>";
+                                    $("#idDivConsulta").append("<td>" + json.items[i].nombre) + "</td>";
+                                    // $("#idDivConsulta").append(json.items[i].codigo + json.items[i].nombre + " ")
+                                    $("#idDivConsulta").append("</tr>");
                                     }                                
                                 console.log(json) 
                 },
